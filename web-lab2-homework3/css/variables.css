@@ -1,0 +1,41 @@
+:root {
+  /* Colors */
+  --bg: #ffffff;
+  --surface: #fff7ed;
+  --surface-alt: #ffedd5;
+  --text: #1c1917;
+  --text-muted: #78716c;
+  --border: #e7e5e4;
+  --accent: #ea580c;
+  --accent-hover: #c2410c;
+  --accent-contrast: #ffffff;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --focus: #2563eb;
+  --card-bg: #ffffff;
+  --badge-flash: #dc2626;
+  --badge-sold: #78716c;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  /* Radius & shadow */
+  --radius: 8px;
+  --radius-sm: 4px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", monospace;
+
+  /* Z-index */
+  --z-skip-link: 100;
+  --z-modal: 200;
+}
