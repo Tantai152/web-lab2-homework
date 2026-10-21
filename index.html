@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Data Grid</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <h1>Enterprise Data Grid</h1>
+        <input
+            type="search"
+            id="search-input"
+            placeholder="Search..."
+            aria-label="Search table data"
+        >
+    </header>
+
+    <main id="main-content">
+        <table
+            id="data-grid"
+            role="grid"
+            aria-label="Enterprise Data Grid"
+        >
+            <caption>Employee Data Grid</caption>
+            <thead>
+                <tr>
+                    <th scope="col" aria-sort="none">
+                        <button type="button" class="sort-btn" data-sort="id">
+                            ID
+                        </button>
+                    </th>
+                    <th scope="col" aria-sort="none">
+                        <button type="button" class="sort-btn" data-sort="name">
+                            Name
+                        </button>
+                    </th>
+                    <th scope="col" aria-sort="none">
+                        <button type="button" class="sort-btn" data-sort="role">
+                            Role
+                        </button>
+                    </th>
+                    <th scope="col" aria-sort="none">
+                        <button type="button" class="sort-btn" data-sort="department">
+                            Department
+                        </button>
+                    </th>
+                    <th scope="col" aria-sort="none">
+                        <button type="button" class="sort-btn" data-sort="status">
+                            Status
+                        </button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="grid-body">
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <nav aria-label="Table pagination">
+            <button
+                type="button"
+                id="prev-page"
+                aria-label="Previous Page"
+                disabled
+            >
+                Previous
+            </button>
+            <span id="page-info" aria-live="polite">Page 1 of 1</span>
+            <button
+                type="button"
+                id="next-page"
+                aria-label="Next Page"
+                disabled
+            >
+                Next
+            </button>
+        </nav>
+    </footer>
+
+    <script src="js/data.js" defer></script>
+    <script src="js/render.js" defer></script>
+    <script src="js/sort.js" defer></script>
+    <script src="js/pagination.js" defer></script>
+    <script src="js/keyboard-nav.js" defer></script>
+</body>
+</html>
