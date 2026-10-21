@@ -1,0 +1,137 @@
+:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+caption {
+    caption-side: top;
+    padding: var(--space-2) 0;
+    font-weight: 600;
+    text-align: left;
+}
+
+th,
+td {
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+thead th {
+    background: var(--card-bg);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+}
+
+tbody tr:hover {
+    background: var(--hover-bg);
+}
+
+tbody tr:focus-within {
+    background: var(--hover-bg);
+    outline: 2px solid var(--focus);
+    outline-offset: -2px;
+}
+
+.sort-btn {
+    background: transparent;
+    border: none;
+    padding: var(--space-1) var(--space-2);
+    font: inherit;
+    font-weight: inherit;
+    color: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    border-radius: var(--radius);
+}
+
+.sort-btn:hover {
+    background: var(--border);
+}
+
+.sort-btn[aria-sort="ascending"]::after {
+    content: " ▲";
+    font-size: 0.75em;
+    color: var(--accent);
+}
+
+.sort-btn[aria-sort="descending"]::after {
+    content: " ▼";
+    font-size: 0.75em;
+    color: var(--accent);
+}
+
+#prev-page,
+#next-page {
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text);
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#prev-page:hover:not(:disabled),
+#next-page:hover:not(:disabled) {
+    background: var(--accent);
+    color: var(--accent-contrast);
+    border-color: var(--accent);
+}
+
+#prev-page:disabled,
+#next-page:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.badge {
+    display: inline-block;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-active {
+    background: var(--success);
+    color: var(--accent-contrast);
+}
+
+.badge-away {
+    background: var(--focus);
+    color: var(--accent-contrast);
+}
+
+.badge-inactive {
+    background: var(--muted);
+    color: var(--accent-contrast);
+}
+
+#page-info {
+    font-size: 0.875rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 600px) {
+    th,
+    td {
+        padding: var(--space-1) var(--space-2);
+        font-size: 0.875rem;
+    }
+}
