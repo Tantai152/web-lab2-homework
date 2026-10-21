@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurrent Audio Visualizer</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <h1>Concurrent Audio Visualizer</h1>
+    </header>
+
+    <main id="main-content">
+        <section id="add-track-section" aria-labelledby="add-track-heading">
+            <h2 id="add-track-heading">Add Track</h2>
+
+            <form id="add-track-form">
+                <label for="track-url">Audio URL (mp3, wav, ogg)</label>
+                <input
+                    type="url"
+                    id="track-url"
+                    name="track-url"
+                    placeholder="https://example.com/song.mp3"
+                    required
+                    aria-describedby="url-hint"
+                >
+                <small id="url-hint">CORS-enabled URLs only.</small>
+                <button type="submit" id="add-track-btn">Add to Queue</button>
+            </form>
+        </section>
+
+        <section id="queue-section" aria-labelledby="queue-heading">
+            <h2 id="queue-heading">Queue</h2>
+            <p id="queue-empty" aria-live="polite">Queue is empty. Add a track to begin.</p>
+            <ol id="queue-list" aria-live="polite"></ol>
+        </section>
+
+        <section id="visualizer-section" aria-labelledby="visualizer-heading">
+            <h2 id="visualizer-heading">Visualizer</h2>
+            <canvas
+                id="visualizer-canvas"
+                width="800"
+                height="300"
+                role="img"
+                aria-label="Audio frequency visualizer"
+            ></canvas>
+        </section>
+
+        <section id="controls-section" aria-labelledby="controls-heading">
+            <h2 id="controls-heading">Controls</h2>
+            <button id="play-btn" type="button" aria-label="Play current track">Play</button>
+            <button id="pause-btn" type="button" aria-label="Pause current track" disabled>Pause</button>
+            <button id="stop-btn" type="button" aria-label="Stop current track" disabled>Stop</button>
+            <p id="now-playing" aria-live="polite">Nothing playing.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Lab 2 HW2 - Concurrent FIFO Audio Visualizer</p>
+    </footer>
+
+    <script src="js/queue.js" defer></script>
+    <script src="js/audio-engine.js" defer></script>
+    <script src="js/visualizer.js" defer></script>
+    <script src="js/cleanup.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
