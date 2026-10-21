@@ -1,0 +1,138 @@
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+}
+
+.card h3 {
+  margin-block-end: var(--space-2);
+  font-size: 1.125rem;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.product-card .price {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.product-card .stock {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.product-card .stock[data-low] {
+  color: var(--warning);
+  font-weight: 600;
+}
+
+.product-card .stock[data-out] {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+button {
+  padding: var(--space-2) var(--space-4);
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  font: inherit;
+  transition: background 0.15s;
+}
+
+button:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+form p {
+  margin-block: var(--space-3);
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-block-end: var(--space-1);
+}
+
+small {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  display: block;
+  margin-block-start: var(--space-1);
+}
+
+input, textarea {
+  width: 100%;
+  padding: var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--danger);
+}
+
+input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+  border-color: var(--success);
+}
+
+#form-status {
+  margin-block-start: var(--space-3);
+  font-weight: 600;
+}
+
+#form-status[data-state="success"] {
+  color: var(--success);
+}
+
+#form-status[data-state="error"] {
+  color: var(--danger);
+}
+
+#form-status[data-state="submitting"] {
+  color: var(--text-muted);
+}
+
+.badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-flash {
+  background: var(--badge-flash);
+  color: var(--accent-contrast);
+}
+
+.badge-sold {
+  background: var(--badge-sold);
+  color: var(--accent-contrast);
+}
